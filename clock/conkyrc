@@ -1,0 +1,56 @@
+conky.config = {
+	background = false,
+	update_interval = 0.5,
+	total_run_times = 0,
+
+	override_utf8_locale = true,
+	use_xft = true,
+	font = 'DeJaVuSans:size=9',
+	xftalpha = 1,
+	uppercase = false,
+	use_spacer = 'none',
+
+	own_window = true,
+	own_window_title = '',
+	own_window_argb_value = 0,
+	own_window_colour = '#000000',
+
+--#########
+	own_window_type = 'normal',
+	own_window_transparent = false,
+	own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
+	own_window_argb_visual = true,
+--#########
+
+	double_buffer = true,
+	no_buffers = true,
+
+	minimum_width = 250, minimum_height = 250,
+	maximum_width = 250,
+
+
+
+
+	alignment = 'top_middle',
+	gap_x = 120,
+	gap_y = 176,
+
+	draw_shades = false,
+	draw_outline = false,
+	draw_borders = false,
+	draw_graph_borders = false,
+	cpu_avg_samples = 2,
+
+	default_shade_color = '#000000',
+	default_outline_color = '#828282',
+	default_color = '#cdcdcd',
+
+	lua_load = '~/projects/conky/widgets/clock/scripts/lua//analog_clock.lua',
+	lua_draw_hook_post = 'cairo_clock 160',
+
+};
+
+conky.text = [[
+
+##===================================== Regards, Etles_Team ==================================##
+]];
