@@ -42,14 +42,14 @@ conky.config = {
 	default_color = '#FFFFFF',
 
 	lua_load = '~/projects/conky/widgets/graphs/graph.lua',
-	lua_draw_hook_pre = 'main_graph',
+	lua_draw_hook_pre = 'main_graph network',
     
 };
 
 conky.text = [[
 ${voffset 0}Network Monitor
-${voffset -10}${alignr}${font NotoSans:size=10}${lua kib_to_bit ${downspeedf enp0s31f6} } | ${lua kib_to_bit ${upspeedf enp0s31f6} }
-${voffset -18}enp0s31f6
+${voffset -10}${alignr}${font NotoSans:size=9}${lua kib_to_bit ${downspeedf enp0s31f6} } | ${lua kib_to_bit ${upspeedf enp0s31f6} }
+${voffset -18}enp0s31f6 (Down | Up)
 ${font}
 
 ]];

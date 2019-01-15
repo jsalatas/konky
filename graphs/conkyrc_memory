@@ -1,0 +1,56 @@
+conky.config = {
+	update_interval = 0.5,
+    cpu_avg_samples = 2,
+    net_avg_samples = 2,
+	override_utf8_locale = true,
+	double_buffer = true,
+	no_buffers = true,
+
+	text_buffer_size = 2048,
+	imlib_cache_size = 0,
+
+	own_window = true,
+	own_window_type = 'normal',
+	own_window_transparent = false,
+	own_window_hints = 'undecorated,sticky,skip_taskbar,skip_pager,below',
+
+	own_window_colour = '#000000',
+	own_window_argb_visual = true,
+	own_window_argb_value = 15,
+
+	border_inner_margin = 0,
+	border_outer_margin = 2,
+
+	minimum_width = 300, minimum_height = 200,
+
+	alignment = 'top_middle',
+	
+    gap_x = 150+120,
+	gap_y = 656,
+
+
+	draw_shades = true,
+	default_shade_color = '#666666',
+	draw_borders = false,
+	draw_graph_borders = false,
+
+	use_xft = true,
+	font = 'NotoSans:size=14',
+	--xftalpha = 0.8,
+
+	uppercase = false,
+
+	default_color = '#FFFFFF',
+
+	lua_load = '~/projects/conky/widgets/graphs/graph.lua',
+	lua_draw_hook_pre = 'main_graph memory',
+    
+};
+
+conky.text = [[
+${voffset 0}Memory Status
+${voffset -10}${alignr}${font NotoSans:size=9}${mem} | ${swap}
+${voffset -18}RAM | Swap
+${font}
+
+]];

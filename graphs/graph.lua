@@ -94,7 +94,7 @@ v1.1 (07/01/2011) Add draw_me parameter and correct memory leaks, thanks to "Cre
 
 require 'cairo'
 
-function set_settings()
+function set_network_settings()
 	graph_settings={
 	     
 	     {
@@ -134,6 +134,46 @@ function set_settings()
 	    	        	    	    	    	    	      	     	    
 end
 
+function set_memory_settings()
+	graph_settings={
+	     
+	     {
+	    name="memperc",
+	    arg="",
+	    max=100,
+        autoscale=false,
+        y=203,
+        x=4,
+        width=300,
+        height=170,
+        nb_values=100,
+        fg_bd_size=2,
+        fg_bd_colour = {{0,0x41B1F7,0.7}},
+        bg_colour = {{0,0x404040,0},{0,0x404040,0}},
+        fg_colour = {{0,0x2363D9,0.4}},
+        foreground=true
+	    },
+	    {
+	    name="swapperc",
+	    arg="",
+	    max=100,
+        autoscale=false,
+        y=203,
+        x=4,
+        width=300,
+        height=170,
+        nb_values=100,
+        fg_bd_size=2,
+        fg_bd_colour = {{0,0xD92363,0.7}},
+        bg_colour = {{0,0x404040,0},{0,0x404040,0}},
+        fg_colour = { {0,0xF741B1,0.4}},
+        foreground=true
+	    },
+	    }
+	    
+	    	        	    	    	    	    	      	     	    
+end
+
 
 function check_settings(t)
     --tables are check only when conky start
@@ -153,7 +193,7 @@ function check_settings(t)
 	return 0
 end
 
-function conky_main_graph()
+function conky_main_graph(type)
 
     if conky_window == nil then return end
 	    
@@ -169,7 +209,11 @@ function conky_main_graph()
     updates_gap=5
     flagOK=0
     if updates==1 then    
-        set_settings()
+        if type == 'network' then
+            set_network_settings()
+        elseif type == 'memory' then
+            set_memory_settings()
+        end
 	    
 		for i in pairs(graph_settings) do
 			if graph_settings[i].width==nil then graph_settings[i].width=100 end
@@ -220,8 +264,12 @@ function conky_main_graph()
         			    end
 					    graph_settings[i].values[nb_values]=value
 				    end
-				    graph_settings[i].automax=math.max(graph_settings[i].automax,
-				                                       graph_settings[i].values[j])
+				    if type == 'memory' then
+                        graph_settings[i].automax=100
+                    else 
+                        graph_settings[i].automax=math.max(graph_settings[i].automax,
+                                                        graph_settings[i].values[j])
+                    end
 			        --should stop weird glitches at beginning when no values reported yet for upspeed or diskio
                     if graph_settings[i].automax == 0 then graph_settings[i].automax = 1 end 
                 end
