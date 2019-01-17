@@ -174,6 +174,163 @@ function set_memory_settings()
 	    	        	    	    	    	    	      	     	    
 end
 
+function set_cpu_settings()
+	graph_settings={
+	     
+	     {
+	    name="cpu",
+	    arg="cpu0",
+	    max=100,
+        autoscale=false,
+        y=113,
+        x=4,
+        width=300,
+        height=70,
+        nb_values=100,
+        fg_bd_size=2,
+        fg_bd_colour = {{0,0x41B1F7,0.7}},
+        bg_colour = {{0,0x404040,0},{0,0x404040,0}},
+        fg_colour = {{0,0x2363D9,0.4}},
+        foreground=true
+	    },
+	     {
+	    name="cpu",
+	    arg="cpu1",
+	    max=100,
+        autoscale=false,
+        y=198,
+        x=4,
+        width=300,
+        height=70,
+        nb_values=100,
+        fg_bd_size=2,
+        fg_bd_colour = {{0,0x41B1F7,0.7}},
+        bg_colour = {{0,0x404040,0},{0,0x404040,0}},
+        fg_colour = {{0,0x2363D9,0.4}},
+        foreground=true
+	    },
+
+        {
+	    name="cpu",
+	    arg="cpu2",
+	    max=100,
+        autoscale=false,
+        y=283,
+        x=4,
+        width=300,
+        height=70,
+        nb_values=100,
+        fg_bd_size=2,
+        fg_bd_colour = {{0,0x41B1F7,0.7}},
+        bg_colour = {{0,0x404040,0},{0,0x404040,0}},
+        fg_colour = {{0,0x2363D9,0.4}},
+        foreground=true
+	    },
+        
+        {
+	    name="cpu",
+	    arg="cpu3",
+	    max=100,
+        autoscale=false,
+        y=368,
+        x=4,
+        width=300,
+        height=70,
+        nb_values=100,
+        fg_bd_size=2,
+        fg_bd_colour = {{0,0x41B1F7,0.7}},
+        bg_colour = {{0,0x404040,0},{0,0x404040,0}},
+        fg_colour = {{0,0x2363D9,0.4}},
+        foreground=true
+	    },
+        {
+	    name="cpu",
+	    arg="cpu4",
+	    max=100,
+        autoscale=false,
+        y=453,
+        x=4,
+        width=300,
+        height=70,
+        nb_values=100,
+        fg_bd_size=2,
+        fg_bd_colour = {{0,0x41B1F7,0.7}},
+        bg_colour = {{0,0x404040,0},{0,0x404040,0}},
+        fg_colour = {{0,0x2363D9,0.4}},
+        foreground=true
+	    },
+
+
+        {
+	    name="cpu",
+	    arg="cpu5",
+	    max=100,
+        autoscale=false,
+        y=538,
+        x=4,
+        width=300,
+        height=70,
+        nb_values=100,
+        fg_bd_size=2,
+        fg_bd_colour = {{0,0x41B1F7,0.7}},
+        bg_colour = {{0,0x404040,0},{0,0x404040,0}},
+        fg_colour = {{0,0x2363D9,0.4}},
+        foreground=true
+	    },
+        {
+	    name="cpu",
+	    arg="cpu6",
+	    max=100,
+        autoscale=false,
+        y=623,
+        x=4,
+        width=300,
+        height=70,
+        nb_values=100,
+        fg_bd_size=2,
+        fg_bd_colour = {{0,0x41B1F7,0.7}},
+        bg_colour = {{0,0x404040,0},{0,0x404040,0}},
+        fg_colour = {{0,0x2363D9,0.4}},
+        foreground=true
+	    },
+        {
+	    name="cpu",
+	    arg="cpu7",
+	    max=100,
+        autoscale=false,
+        y=708,
+        x=4,
+        width=300,
+        height=70,
+        nb_values=100,
+        fg_bd_size=2,
+        fg_bd_colour = {{0,0x41B1F7,0.7}},
+        bg_colour = {{0,0x404040,0},{0,0x404040,0}},
+        fg_colour = {{0,0x2363D9,0.4}},
+        foreground=true
+	    },
+        {
+	    name="cpu",
+	    arg="cpu8",
+	    max=100,
+        autoscale=false,
+        y=793,
+        x=4,
+        width=300,
+        height=70,
+        nb_values=100,
+        fg_bd_size=2,
+        fg_bd_colour = {{0,0x41B1F7,0.7}},
+        bg_colour = {{0,0x404040,0},{0,0x404040,0}},
+        fg_colour = {{0,0x2363D9,0.4}},
+        foreground=true
+	    },
+        
+        }
+	    
+	    	        	    	    	    	    	      	     	    
+end
+
 
 function check_settings(t)
     --tables are check only when conky start
@@ -213,6 +370,8 @@ function conky_main_graph(type)
             set_network_settings()
         elseif type == 'memory' then
             set_memory_settings()
+        elseif type == 'cpu' then
+            set_cpu_settings()
         end
 	    
 		for i in pairs(graph_settings) do
@@ -264,7 +423,7 @@ function conky_main_graph(type)
         			    end
 					    graph_settings[i].values[nb_values]=value
 				    end
-				    if type == 'memory' then
+				    if type == 'memory' or type == 'cpu' then
                         graph_settings[i].automax=100
                     else 
                         graph_settings[i].automax=math.max(graph_settings[i].automax,
