@@ -20,12 +20,12 @@ conky.config = {
 	border_inner_margin = 0,
 	border_outer_margin = 2,
 
-	minimum_width = 300, minimum_height = 600,
+	minimum_width = 300, minimum_height = 100,
 
 	alignment = 'top_right',
 	
-    gap_x = 50,
-	gap_y = 450-160,
+    gap_x = 25,
+	gap_y = 25,
 
 
 	draw_shades = true,
@@ -41,7 +41,7 @@ conky.config = {
 
 	default_color = '#FFFFFF',
 
-	lua_load = '~/projects/conky/widgets/graphs/graph.lua',
+	lua_load = '~/.conky/graphs/graph.lua',
 	lua_draw_hook_pre = 'main_graph cpu',
     
 };
@@ -110,6 +110,5 @@ ${voffset -22}Thread 10
 
 ${voffset -5}${alignr}${cpu cpu8}% 
 ${voffset -22}Thread 11
-
-
+${voffset 8}
 ${font}]];

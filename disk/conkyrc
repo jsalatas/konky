@@ -25,8 +25,8 @@ conky.config = {
 
 	alignment = 'top_right',
 	
-    gap_x = 150+207,
-	gap_y = 862-160,
+    gap_x = 332,
+	gap_y = 437,
 
 
 	draw_shades = true,
@@ -42,7 +42,7 @@ conky.config = {
 
 	default_color = '#FFFFFF',
 
-	lua_load = '~/projects/conky/widgets/disk/bar_graph.lua',
+	lua_load = '~/.conky/disk/bar_graph.lua',
 	lua_draw_hook_pre = 'main',
     
 

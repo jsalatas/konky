@@ -20,12 +20,12 @@ conky.config = {
 	border_inner_margin = 0,
 	border_outer_margin = 2,
 
-	minimum_width = 300, minimum_height = 516,
+	minimum_width = 300, minimum_height = 503,
 
 	alignment = 'top_right',
 	
-    gap_x = 150+207,
-	gap_y = 862-30,
+    gap_x = 332,
+	gap_y = 567,
 
 
 	draw_shades = true,
@@ -40,7 +40,7 @@ conky.config = {
 	uppercase = false,
 
 	default_color = '#FFFFFF',
-	lua_load = '~/projects/conky/widgets/sensors/utils.lua',
+	lua_load = '~/.conky/sensors/utils.lua',
 
 };
 
@@ -68,4 +68,4 @@ ${font}${voffset 8}Fans
 ${voffset -5}${alignr}${font NotoSans:size=12}${hwmon 1 fan 1}RPM
 ${voffset -24}Fan 1:
 ${alignr}${hwmon 1 fan 2}RPM
-${voffset -24}Fan 2:${font}${voffset -24}]];
+${voffset -24}Fan 2:${font}]];

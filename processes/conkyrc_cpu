@@ -24,9 +24,8 @@ conky.config = {
 
 	alignment = 'top_right',
 	
-    gap_x = 50,
-	gap_y = 1086,
-
+    gap_x = 25,
+	gap_y = 1076,
 
 	draw_shades = true,
 	default_shade_color = '#666666',
@@ -34,7 +33,7 @@ conky.config = {
 	draw_graph_borders = false,
 
 	use_xft = true,
-	font = 'NotoSans:size=14',
+	font = 'NotoSans:size=16',
 	--xftalpha = 0.8,
 
 	uppercase = false,
@@ -45,7 +44,7 @@ conky.config = {
 
 conky.text = [[
 ${voffset 0}Processes by CPU
-${voffset -5}${alignr}${font NotoSans:size=10}${top cpu 1}% 
+${voffset -5}${alignr}${font NotoSans:size=12}${top cpu 1}% 
 ${voffset -21}${top_mem name 1}
 ${alignr}${top cpu 2}% 
 ${voffset -21}${top_mem name 2}
