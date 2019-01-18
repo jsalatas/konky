@@ -41,7 +41,7 @@ conky.config = {
 
 	default_color = '#FFFFFF',
 
-	lua_load = '~/projects/conky/widgets/graphs/graph.lua',
+	lua_load = '~/.conky/graphs/graph.lua',
 	lua_draw_hook_pre = 'main_graph cpu',
     
 };

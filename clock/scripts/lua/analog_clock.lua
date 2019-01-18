@@ -3,7 +3,7 @@
 
 require 'cairo'
 
-image_path = os.getenv ('HOME')..'/projects/conky/widgets/clock/images/'
+image_path = os.getenv ('HOME')..'/.conky/clock/images/'
 
 function conky_cairo_clock(w,x,y)
 
