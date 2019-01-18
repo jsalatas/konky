@@ -1,6 +1,6 @@
 conky.config = {
 	background = false,
-	update_interval = 0.5,
+	update_interval = 1,
 	total_run_times = 0,
 
 	override_utf8_locale = true,

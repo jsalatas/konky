@@ -1,5 +1,5 @@
 conky.config = {
-	update_interval = 0.5,
+	update_interval = 1,
 	net_avg_samples = 2,
 	override_utf8_locale = true,
 	double_buffer = true,
