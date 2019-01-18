@@ -21,7 +21,7 @@ conky.config = {
 	default_color = 'white',
 	alignment = 'top_middle',
 	gap_x = 120,
-	gap_y = 400,
+	gap_y = 400-176,
 	no_buffers = false,
 	uppercase = false,
 	override_utf8_locale = true,
@@ -30,5 +30,6 @@ conky.config = {
 };
 
 conky.text = [[
-${time %A}, ${time %B} ${time %d}, ${time %Y}
+${alignc}${time %A}, ${time %B} ${time %d}, ${time %Y}
+${voffset -6}${alignc}${font NotoSans:size=10}uptime: ${uptime}${font}
 ]];

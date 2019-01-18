@@ -26,7 +26,7 @@ conky.config = {
 	alignment = 'top_middle',
 	
     gap_x = 150+120,
-	gap_y = 656,
+	gap_y = 656-160,
 
 
 	draw_shades = true,
