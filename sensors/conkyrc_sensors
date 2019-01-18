@@ -1,0 +1,64 @@
+conky.config = {
+	update_interval = 0.5,
+	net_avg_samples = 2,
+	override_utf8_locale = true,
+	double_buffer = true,
+	no_buffers = false,
+
+	text_buffer_size = 2048,
+	imlib_cache_size = 0,
+
+	own_window = true,
+	own_window_type = 'normal',
+	own_window_transparent = false,
+	own_window_hints = 'undecorated,sticky,skip_taskbar,skip_pager,below',
+
+	own_window_colour = '#000000',
+	own_window_argb_visual = true,
+	own_window_argb_value = 15,
+
+	border_inner_margin = 0,
+	border_outer_margin = 2,
+
+	minimum_width = 300, minimum_height = 254,
+
+	alignment = 'top_middle',
+	
+    gap_x = 150+120,
+	gap_y = 862+124,
+
+
+	draw_shades = true,
+	default_shade_color = '#666666',
+	draw_borders = false,
+	draw_graph_borders = false,
+
+	use_xft = true,
+	font = 'NotoSans:size=14',
+	--xftalpha = 0.8,
+
+	uppercase = false,
+
+	default_color = '#FFFFFF',
+
+};
+
+conky.text = [[
+${voffset 0}Temperatures
+${alignr}${font NotoSans:size=10}${hwmon 1 temp 1}°C
+${voffset -21}Package id 0:
+${alignr}${font NotoSans:size=10}${hwmon 1 temp 2}°C
+${voffset -21}Core 0:
+${alignr}${font NotoSans:size=10}${hwmon 1 temp 3}°C
+${voffset -21}Core 1:
+${alignr}${font NotoSans:size=10}${hwmon 1 temp 4}°C
+${voffset -21}Core 2:
+${alignr}${font NotoSans:size=10}${hwmon 1 temp 5}°C
+${voffset -21}Core 3:
+${alignr}${font NotoSans:size=10}${nvidia temp}°C
+${voffset -21}Nvidia:
+${alignr}${font NotoSans:size=10}${exec sudo /home/john/bin/nvme_temp.sh  }°C
+${voffset -21}NVME:
+${font}
+
+]];
