@@ -20,12 +20,12 @@ conky.config = {
 	border_inner_margin = 0,
 	border_outer_margin = 2,
 
-	minimum_width = 300, minimum_height = 254,
+	minimum_width = 300, minimum_height = 516,
 
-	alignment = 'top_middle',
+	alignment = 'top_right',
 	
-    gap_x = 150+120,
-	gap_y = 862-36,
+    gap_x = 150+207,
+	gap_y = 862-30,
 
 
 	draw_shades = true,
@@ -34,30 +34,38 @@ conky.config = {
 	draw_graph_borders = false,
 
 	use_xft = true,
-	font = 'NotoSans:size=14',
+	font = 'NotoSans:size=16',
 	--xftalpha = 0.8,
 
 	uppercase = false,
 
 	default_color = '#FFFFFF',
+	lua_load = '~/projects/conky/widgets/sensors/utils.lua',
 
 };
 
 conky.text = [[
 ${voffset 0}Temperatures
-${voffset -5}${alignr}${font NotoSans:size=10}${hwmon 1 temp 1}°C
-${voffset -21}Package id 0:
-${alignr}${hwmon 1 temp 2}°C
-${voffset -21}Core 0:
-${alignr}${hwmon 1 temp 3}°C
-${voffset -21}Core 1:
-${alignr}${hwmon 1 temp 4}°C
-${voffset -21}Core 2:
-${alignr}${hwmon 1 temp 5}°C
-${voffset -21}Core 3:
-${alignr}${nvidia temp}°C
-${voffset -21}Nvidia:
-${alignr}${exec sudo /home/john/bin/nvme_temp.sh  }°C
-${voffset -21}NVME:
-${font}
-]];
+${voffset -5}${alignr}${font NotoSans:size=12}${hwmon 2 temp 1}°C
+${voffset -24}Package id 0:
+${alignr}${hwmon 2 temp 2}°C
+${voffset -24}Core 0:
+${alignr}${hwmon 2 temp 3}°C
+${voffset -24}Core 1:
+${alignr}${hwmon 2 temp 4}°C
+${voffset -24}Core 2:
+${alignr}${hwmon 2 temp 5}°C
+${voffset -24}Core 3:
+${alignr}${hwmon 2 temp 4}°C
+${voffset -24}Core 4:
+${alignr}${hwmon 2 temp 5}°C
+${voffset -24}Core 5:
+${alignr}${exec /home/john/bin/nvidia_temp.sh 2>/dev/null}
+${voffset -24}Nvidia:
+${alignr}${exec sudo /home/john/bin/nvme_temp.sh}°C
+${voffset -24}NVME:
+${font}${voffset 8}Fans
+${voffset -5}${alignr}${font NotoSans:size=12}${hwmon 1 fan 1}RPM
+${voffset -24}Fan 1:
+${alignr}${hwmon 1 fan 2}RPM
+${voffset -24}Fan 2:${font}${voffset -24}]];

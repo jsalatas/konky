@@ -22,7 +22,7 @@
 
 	minimum_width = 300, minimum_height = 215,
 
-	alignment = 'top_middle',
+	alignment = 'top_right',
 	
     gap_x = 270,
 	gap_y = 1086,

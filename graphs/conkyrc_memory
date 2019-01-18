@@ -23,9 +23,9 @@ conky.config = {
 
 	minimum_width = 300, minimum_height = 200,
 
-	alignment = 'top_middle',
+	alignment = 'top_right',
 	
-    gap_x = 150+120,
+    gap_x = 150+207,
 	gap_y = 656-160,
 
 
@@ -35,7 +35,7 @@ conky.config = {
 	draw_graph_borders = false,
 
 	use_xft = true,
-	font = 'NotoSans:size=14',
+	font = 'NotoSans:size=16',
 	--xftalpha = 0.8,
 
 	uppercase = false,
@@ -49,8 +49,8 @@ conky.config = {
 
 conky.text = [[
 ${voffset 0}Memory Status
-${voffset -10}${alignr}${font NotoSans:size=9}${mem} | ${swap}
-${voffset -18}RAM | Swap
+${voffset -10}${alignr}${font NotoSans:size=11}${mem} | ${swap}
+${voffset -22}RAM | Swap
 ${font}
 
 ]];

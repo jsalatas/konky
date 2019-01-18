@@ -22,9 +22,9 @@ conky.config = {
 
 	minimum_width = 300, minimum_height = 600,
 
-	alignment = 'top_middle',
+	alignment = 'top_right',
 	
-    gap_x = -37,
+    gap_x = 50,
 	gap_y = 450-160,
 
 
@@ -34,7 +34,7 @@ conky.config = {
 	draw_graph_borders = false,
 
 	use_xft = true,
-	font = 'NotoSans:size=14',
+	font = 'NotoSans:size=16',
 	--xftalpha = 0.8,
 
 	uppercase = false,
@@ -48,56 +48,68 @@ conky.config = {
 
 conky.text = [[
 ${voffset 0}CPU Load Monitor
-${voffset -10}${alignr}${font NotoSans:size=9}${cpu cpu0}% 
-${voffset -18}System
-
+${voffset -10}${alignr}${font NotoSans:size=11}${cpu cpu0}% 
+${voffset -22}System
 
 
 
 ${voffset -5}${alignr}${cpu cpu1}% 
-${voffset -18}Thread 0
-
+${voffset -22}Thread 0
 
 
 
 ${voffset -5}${alignr}${cpu cpu2}% 
-${voffset -18}Thread 1
-
+${voffset -22}Thread 1
 
 
 
 ${voffset -5}${alignr}${cpu cpu3}% 
-${voffset -18}Thread 2
-
+${voffset -22}Thread 2
 
 
 
 ${voffset -5}${alignr}${cpu cpu4}% 
-${voffset -18}Thread 3
-
+${voffset -22}Thread 3
 
 
 
 ${voffset -5}${alignr}${cpu cpu5}% 
-${voffset -18}Thread 4
-
+${voffset -22}Thread 4
 
 
 
 ${voffset -5}${alignr}${cpu cpu6}% 
-${voffset -18}Thread 5
-
+${voffset -22}Thread 5
 
 
 
 ${voffset -5}${alignr}${cpu cpu7}% 
-${voffset -18}Thread 6
-
+${voffset -22}Thread 6
 
 
 
 ${voffset -5}${alignr}${cpu cpu8}% 
-${voffset -18}Thread 7
+${voffset -22}Thread 7
+
+
+
+${voffset -5}${alignr}${cpu cpu8}% 
+${voffset -22}Thread 8
+
+
+
+${voffset -5}${alignr}${cpu cpu8}% 
+${voffset -22}Thread 9
+
+
+
+${voffset -5}${alignr}${cpu cpu8}% 
+${voffset -22}Thread 10
+
+
+
+${voffset -5}${alignr}${cpu cpu8}% 
+${voffset -22}Thread 11
 
 
 ${font}]];
