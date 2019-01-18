@@ -45,20 +45,19 @@ conky.config = {
 
 conky.text = [[
 ${voffset 0}Temperatures
-${alignr}${font NotoSans:size=10}${hwmon 1 temp 1}°C
+${voffset -5}${alignr}${font NotoSans:size=10}${hwmon 1 temp 1}°C
 ${voffset -21}Package id 0:
-${alignr}${font NotoSans:size=10}${hwmon 1 temp 2}°C
+${alignr}${hwmon 1 temp 2}°C
 ${voffset -21}Core 0:
-${alignr}${font NotoSans:size=10}${hwmon 1 temp 3}°C
+${alignr}${hwmon 1 temp 3}°C
 ${voffset -21}Core 1:
-${alignr}${font NotoSans:size=10}${hwmon 1 temp 4}°C
+${alignr}${hwmon 1 temp 4}°C
 ${voffset -21}Core 2:
-${alignr}${font NotoSans:size=10}${hwmon 1 temp 5}°C
+${alignr}${hwmon 1 temp 5}°C
 ${voffset -21}Core 3:
-${alignr}${font NotoSans:size=10}${nvidia temp}°C
+${alignr}${nvidia temp}°C
 ${voffset -21}Nvidia:
-${alignr}${font NotoSans:size=10}${exec sudo /home/john/bin/nvme_temp.sh  }°C
+${alignr}${exec sudo /home/john/bin/nvme_temp.sh  }°C
 ${voffset -21}NVME:
 ${font}
-
 ]];
