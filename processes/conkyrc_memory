@@ -46,22 +46,22 @@
 conky.text = [[
 ${voffset 0}Processes by Memory
 ${voffset -5}${alignr}${font NotoSans:size=12}${top_mem mem_res 1} 
-${voffset -21}${top_mem name 1}
+${voffset -22}${top_mem name 1}
 ${alignr}${top_mem mem_res 2} 
-${voffset -21}${top_mem name 2}
+${voffset -22}${top_mem name 2}
 ${alignr}${top_mem mem_res 3} 
-${voffset -21}${top_mem name 3}
+${voffset -22}${top_mem name 3}
 ${alignr}${top_mem mem_res 4} 
-${voffset -21}${top_mem name 4}
+${voffset -22}${top_mem name 4}
 ${alignr}${top_mem mem_res 5} 
-${voffset -21}${top_mem name 5}
+${voffset -22}${top_mem name 5}
 ${alignr}${top_mem mem_res 6} 
-${voffset -21}${top_mem name 6}
+${voffset -22}${top_mem name 6}
 ${alignr}${top_mem mem_res 7} 
-${voffset -21}${top_mem name 7}
+${voffset -22}${top_mem name 7}
 ${alignr}${top_mem mem_res 8} 
-${voffset -21}${top_mem name 8}
+${voffset -22}${top_mem name 8}
 ${alignr}${top_mem mem_res 9} 
-${voffset -21}${top_mem name 9}
+${voffset -22}${top_mem name 9}
 ${alignr}${top_mem mem_res 10} 
-${voffset -21}${top_mem name 10}${font}${voffset -21}]];
+${voffset -22}${top_mem name 10}${font}${voffset -22}]];

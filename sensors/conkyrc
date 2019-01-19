@@ -47,25 +47,25 @@ conky.config = {
 conky.text = [[
 ${voffset 0}Temperatures
 ${voffset -5}${alignr}${font NotoSans:size=12}${hwmon 2 temp 1}°C
-${voffset -24}Package id 0:
+${voffset -22}Package id 0:
 ${alignr}${hwmon 2 temp 2}°C
-${voffset -24}Core 0:
+${voffset -22}Core 0:
 ${alignr}${hwmon 2 temp 3}°C
-${voffset -24}Core 1:
+${voffset -22}Core 1:
 ${alignr}${hwmon 2 temp 4}°C
-${voffset -24}Core 2:
+${voffset -22}Core 2:
 ${alignr}${hwmon 2 temp 5}°C
-${voffset -24}Core 3:
+${voffset -22}Core 3:
 ${alignr}${hwmon 2 temp 4}°C
-${voffset -24}Core 4:
+${voffset -22}Core 4:
 ${alignr}${hwmon 2 temp 5}°C
-${voffset -24}Core 5:
+${voffset -22}Core 5:
 ${alignr}${exec /home/john/bin/nvidia_temp.sh 2>/dev/null}
-${voffset -24}Nvidia:
+${voffset -22}Nvidia:
 ${alignr}${exec sudo /home/john/bin/nvme_temp.sh}°C
-${voffset -24}NVME:
+${voffset -22}NVME:
 ${font}${voffset 8}Fans
 ${voffset -5}${alignr}${font NotoSans:size=12}${hwmon 1 fan 1}RPM
-${voffset -24}Fan 1:
+${voffset -22}Fan 1:
 ${alignr}${hwmon 1 fan 2}RPM
-${voffset -24}Fan 2:${font}]];
+${voffset -22}Fan 2:${font}]];
