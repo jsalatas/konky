@@ -1,6 +1,7 @@
 #!/bin/sh
 cd ~/.conky
 killall conky
+sleep 10
 conky -dqc clock/conkyrc
 conky -dqc date/conkyrc
 conky -dqc graphs/conkyrc_cpu
